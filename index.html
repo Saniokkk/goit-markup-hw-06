@@ -400,34 +400,34 @@
     </footer>
     <div data-modal class="backdrop is-hidden">
         <div class="modal">
-            <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <p class="modal-title">Оставьте свои данные, мы вам перезвоним<p>
             <form class="modal-form">
                 <div class="client-data">
                     <label class="label-text" for="client-name">Имя</label>
-                    <input 
-                    class="client-input" 
-                    type="text" 
-                    name="name" 
-                    id="client-name" 
-                    >
+                    <span class="client-input-icon">
+                        <input class="client-input" type="name" name="name" id="client-name">
+                        <svg class="modal-icon">
+                            <use href="./images/icons.svg#icon-person-black"></use>
+                        </svg>
+                    </span>
                 </div>
                 <div class="client-data">
                     <label class="label-text" for="client-tel">Телефон</label>
-                    <input 
-                    class="client-input"
-                    type="tel" 
-                    name="tel" 
-                    id="client-tel"
-                    >
+                    <span class="client-input-icon">
+                        <input class="client-input" type="tel" name="tel" id="client-tel">
+                        <svg class="modal-icon">
+                            <use href="./images/icons.svg#icon-phone-black"></use>
+                        </svg>
+                    </span>
                 </div>
                 <div class="client-data">
                     <label class="label-text" for="client-mail">Почта  </label>
-                    <input 
-                    class="client-input"
-                    type="email" 
-                    name="client-mail" 
-                    id="client-mail"
-                    >
+                    <span class="client-input-icon">
+                        <input class="client-input" type="email" name="client-mail" id="client-mail">
+                        <svg class="modal-icon">
+                            <use href="./images/icons.svg#icon-email-black"></use>
+                        </svg>
+                    </span>
                 </div>
                 <div class="client-data">
                     <label class="label-text" for="comments">Комментарий</label>
@@ -437,14 +437,17 @@
                     placeholder="Введите текст"
                     ></textarea>
                 </div>
-                <label class="agreement-checkbox">
-                    <input 
-                    type="checkbox"
-                    name="agreement"
-                    value="agreement"
-                    >
-                    Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
-                </label>
+                <div class="checkbox-wrapper">
+                    <input class="input-checkbox visually-hidden" type="checkbox" id="checkbox" name="agreement" value="agreement">
+                    <label for="checkbox" class="checkbox-label">
+                    <span>
+                        <svg class="checkbox-icon">
+                            <use href="./images/icons.svg#icon-vector"></use>
+                        </svg>
+                    </span>
+                        Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
+                    </label>
+                </div>
                 <button type="submit" class="modal-btn">Отправить</button>
             </form>
             <button data-modal-close class="btn-close">

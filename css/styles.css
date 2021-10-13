@@ -592,13 +592,16 @@ img {
 }
 
 .footer-input {
-  margin-top: 20px;
   width: 358px;
   height: 50px;
+  margin-top: 20px;
+  padding-left: 16px;
   background: inherit;
+  color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  outline: none;
 }
 
 .footer-input::placeholder {
@@ -608,7 +611,6 @@ img {
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.6);
-  padding-left: 16px;
 }
 
 .footer-btn {
@@ -810,12 +812,38 @@ img {
   flex-direction: column;
 }
 
+.client-input-icon {
+  position: relative;
+}
+
 .client-input {
   width: 100%;
   height: 40px;
   margin-bottom: 10px;
+  padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  outline: none;
+}
+
+.client-input:focus {
+  border: 1px solid var(--accent-color);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.client-input:focus + .modal-icon {
+  fill: var(--accent-color);
+}
+
+.modal-icon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .client-comments {
@@ -826,6 +854,13 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
+  outline: none;
+}
+
+.client-comments:focus {
+  border: 1px solid var(--accent-color);
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
 .client-comments::placeholder {
@@ -841,16 +876,33 @@ img {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-
   color: var(--text-color);
 }
 
-.agreement-checkbox {
+.checkbox-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.input-checkbox:focus + .checkbox-label span {
+  background: var(--accent-color);
+  border: none;
+}
+.checkbox-label {
   margin-bottom: 30px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   color: var(--text-color);
+}
+
+.checkbox-icon {
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  outline: none;
 }
 .modal-btn {
   margin-left: 12px;
