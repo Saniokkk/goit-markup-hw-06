@@ -831,6 +831,7 @@ img {
 
 .client-input:focus {
   border: 1px solid var(--accent-color);
+  cursor: pointer;
 }
 
 .client-input:focus + .modal-icon {
@@ -865,6 +866,7 @@ img {
 
 .client-comments:focus {
   border: 1px solid var(--accent-color);
+  cursor: pointer;
 }
 
 .client-comments::placeholder {
